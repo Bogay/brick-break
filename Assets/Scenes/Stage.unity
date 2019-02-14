@@ -564,7 +564,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  forceScalor: 1000
 --- !u!61 &1517740359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -833,8 +832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeefbeb62995bba47b8f39d9832c579a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 200
   speed: 8
+  forceScalor: 1000
 --- !u!1 &1834569662
 GameObject:
   m_ObjectHideFlags: 0
