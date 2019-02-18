@@ -10,14 +10,10 @@ public class SoundPlayer : MonoBehaviour
 		{
 			if(!_instance)
 			{
-				_instance = FindObjectOfType<SoundPlayer>();
-				if(!_instance)
-				{
-					GameObject soundPlayerObject = new GameObject("SoundPlayer");
-					_instance = soundPlayerObject.AddComponent<SoundPlayer>();
-					_instance.bgm = soundPlayerObject.AddComponent<AudioSource>();
-					_instance.se = soundPlayerObject.AddComponent<AudioSource>();
-				}
+				GameObject soundPlayerObject = new GameObject("SoundPlayer");
+				_instance = soundPlayerObject.AddComponent<SoundPlayer>();
+				_instance.bgm = soundPlayerObject.AddComponent<AudioSource>();
+				_instance.se = soundPlayerObject.AddComponent<AudioSource>();
 			}
 			return _instance;
 		}
