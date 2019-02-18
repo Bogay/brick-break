@@ -7,6 +7,8 @@ public class Ball : MonoBehaviour
 	public float speed;
 	public float forceScalor;
 
+	public AudioClip collisionSE;
+
 	private Rigidbody2D rb2d;
 	private Transform self;
 
@@ -37,5 +39,7 @@ public class Ball : MonoBehaviour
 			print(temp);
 			rb2d.AddForce(Vector2.right * (temp * forceScalor));
 		}
+
+		SoundPlayer.instance.playSE(collisionSE);
 	}
 }
