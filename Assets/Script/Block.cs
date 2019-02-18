@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Block : MonoBehaviour {
+public class Block : MonoBehaviour
+{
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-		if(other.gameObject.tag == "Player") Destroy(gameObject);
+		if(other.gameObject.tag == "Player")
+		{
+			StageHandler.instance.onBlockBreak();
+			Destroy(gameObject);
+		}
 	}
 }
